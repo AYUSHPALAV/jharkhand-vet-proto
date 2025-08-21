@@ -1,0 +1,72 @@
+{
+  "app_name": "Jharkhand Veterinary Services",
+  "welcome_message": "Welcome to Jharkhand Veterinary Services",
+  "emergency_number": "Emergency: 1800-XXX-XXXX",
+  
+  "navigation": {
+    "home": "Home",
+    "report_issues": "Report Issues",
+    "book_visit": "Book Visit",
+    "schemes": "Apply Schemes",
+    "wildlife_report": "Wildlife Report",
+    "doctor_portal": "Doctor Portal"
+  },
+  
+  "services": {
+    "report_health_issues": "Report Health Issues",
+    "book_vet_visits": "Book Vet Visits",
+    "government_schemes": "Government Schemes",
+    "wildlife_reporting": "Wildlife Reporting"
+  },
+  
+  "forms": {
+    "farmer_name": "Farmer Name",
+    "phone_number": "Phone Number",
+    "village": "Village",
+    "animal_type": "Animal Type",
+    "symptoms": "Symptoms",
+    "severity": "Severity",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "next": "Next",
+    "previous": "Previous",
+    "required_field": "This field is required"
+  },
+  
+  "animals": {
+    "cattle": "Cattle (Cow/Bull/Buffalo)",
+    "goat": "Goat",
+    "sheep": "Sheep",
+    "poultry": "Poultry",
+    "pig": "Pig",
+    "other": "Other"
+  },
+  
+  "severity_levels": {
+    "low": "Mild",
+    "medium": "Moderate", 
+    "high": "Severe",
+    "critical": "Emergency"
+  },
+  
+  "status": {
+    "pending": "Pending",
+    "assigned": "Assigned",
+    "in_progress": "In Progress",
+    "resolved": "Resolved",
+    "closed": "Closed"
+  },
+  
+  "notifications": {
+    "report_submitted": "Your health report has been submitted successfully",
+    "appointment_booked": "Your appointment has been booked successfully",
+    "scheme_applied": "Your scheme application has been submitted",
+    "wildlife_reported": "Your wildlife sighting has been reported"
+  },
+  
+  "errors": {
+    "network_error": "Network error. Please try again.",
+    "invalid_input": "Please check your input and try again.",
+    "server_error": "Server error. Please try again later."
+  }
+}

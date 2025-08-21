@@ -1,0 +1,72 @@
+{
+  "app_name": "झारखंड पशु चिकित्सा सेवाएं",
+  "welcome_message": "झारखंड पशु चिकित्सा सेवाओं में आपका स्वागत है",
+  "emergency_number": "आपातकाल: 1800-XXX-XXXX",
+  
+  "navigation": {
+    "home": "होम",
+    "report_issues": "समस्या रिपोर्ट करें",
+    "book_visit": "डॉक्टर बुक करें",
+    "schemes": "योजना आवेदन",
+    "wildlife_report": "वन्यजीव रिपोर्ट",
+    "doctor_portal": "डॉक्टर पोर्टल"
+  },
+  
+  "services": {
+    "report_health_issues": "स्वास्थ्य समस्याओं की रिपोर्ट करें",
+    "book_vet_visits": "पशु चिकित्सक की यात्रा बुक करें",
+    "government_schemes": "सरकारी योजनाएं",
+    "wildlife_reporting": "वन्यजीव रिपोर्टिंग"
+  },
+  
+  "forms": {
+    "farmer_name": "किसान का नाम",
+    "phone_number": "फोन नंबर",
+    "village": "गांव",
+    "animal_type": "पशु का प्रकार",
+    "symptoms": "लक्षण",
+    "severity": "गंभीरता",
+    "submit": "जमा करें",
+    "cancel": "रद्द करें",
+    "next": "अगला",
+    "previous": "पिछला",
+    "required_field": "यह फील्ड आवश्यक है"
+  },
+  
+  "animals": {
+    "cattle": "गाय/बैल/भैंस",
+    "goat": "बकरी",
+    "sheep": "भेड़",
+    "poultry": "मुर्गी",
+    "pig": "सुअर",
+    "other": "अन्य"
+  },
+  
+  "severity_levels": {
+    "low": "हल्का",
+    "medium": "मध्यम",
+    "high": "गंभीर",
+    "critical": "आपातकाल"
+  },
+  
+  "status": {
+    "pending": "लंबित",
+    "assigned": "सौंपा गया",
+    "in_progress": "प्रगति में",
+    "resolved": "हल हो गया",
+    "closed": "बंद"
+  },
+  
+  "notifications": {
+    "report_submitted": "आपकी स्वास्थ्य रिपोर्ट सफलतापूर्वक जमा की गई है",
+    "appointment_booked": "आपकी अपॉइंटमेंट सफलतापूर्वक बुक की गई है",
+    "scheme_applied": "आपका योजना आवेदन जमा किया गया है",
+    "wildlife_reported": "आपकी वन्यजीव दृश्यता रिपोर्ट की गई है"
+  },
+  
+  "errors": {
+    "network_error": "नेटवर्क त्रुटि। कृपया पुनः प्रयास करें।",
+    "invalid_input": "कृपया अपना इनपुट जांचें और पुनः प्रयास करें।",
+    "server_error": "सर्वर त्रुटि। कृपया बाद में पुनः प्रयास करें।"
+  }
+}

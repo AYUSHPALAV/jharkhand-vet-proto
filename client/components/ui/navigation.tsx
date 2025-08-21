@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useLanguage, languages } from '@/hooks/useLanguage';
 import { 
   Heart, 
   CalendarCheck, 
@@ -13,50 +14,45 @@ import {
   Globe
 } from 'lucide-react';
 
-const languages = [
-  { code: 'en', name: 'English', native: 'English' },
-  { code: 'hi', name: 'Hindi', native: 'हिंदी' },
-  { code: 'sat', name: 'Santali', native: 'ᱥᱟᱱᱛᱟᱲᱤ' },
-  { code: 'mun', name: 'Mundari', native: 'ᱢᱩᱱᱰᱟᱨᱤ' }
-];
 
-const navItems = [
-  { 
-    name: 'Report Issues', 
-    path: '/report-issues', 
-    icon: Heart,
-    description: 'Report animal health problems'
-  },
-  { 
-    name: 'Book Visit', 
-    path: '/book-visit', 
-    icon: CalendarCheck,
-    description: 'Schedule veterinary visits'
-  },
-  { 
-    name: 'Apply Schemes', 
-    path: '/schemes', 
-    icon: FileText,
-    description: 'Government livestock schemes'
-  },
-  { 
-    name: 'Wildlife Report', 
-    path: '/wildlife-report', 
-    icon: TreePine,
-    description: 'Report wild animal sightings'
-  },
-  { 
-    name: 'Doctor Portal', 
-    path: '/doctor-portal', 
-    icon: Stethoscope,
-    description: 'Veterinary doctor dashboard'
-  }
-];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('en');
   const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const { currentLanguage, setLanguage, t } = useLanguage();
+
+  const navItems = [
+    { 
+      name: t('report_health_issues'), 
+      path: '/report-issues', 
+      icon: Heart,
+      description: t('report_health_issues')
+    },
+    { 
+      name: t('book_vet_visits'), 
+      path: '/book-visit', 
+      icon: CalendarCheck,
+      description: t('book_vet_visits')
+    },
+    { 
+      name: t('government_schemes'), 
+      path: '/schemes', 
+      icon: FileText,
+      description: t('government_schemes')
+    },
+    { 
+      name: t('wildlife_reporting'), 
+      path: '/wildlife-report', 
+      icon: TreePine,
+      description: t('wildlife_reporting')
+    },
+    { 
+      name: 'Doctor Portal', 
+      path: '/doctor-portal', 
+      icon: Stethoscope,
+      description: 'Veterinary doctor dashboard'
+    }
+  ];
 
   return (
     <motion.nav 
@@ -78,9 +74,9 @@ export function Navigation() {
             </motion.div>
             <div>
               <h1 className="text-xl font-bold text-nature-forest">
-                Jharkhand Veterinary
+                {t('app_name').split(' ').slice(0, 2).join(' ')}
               </h1>
-              <p className="text-sm text-nature-earth">Department</p>
+              <p className="text-sm text-nature-earth">{t('app_name').split(' ').slice(2).join(' ')}</p>
             </div>
           </Link>
 
@@ -120,7 +116,7 @@ export function Navigation() {
               >
                 <Globe className="h-4 w-4" />
                 <span className="text-sm font-medium">
-                  {languages.find(lang => lang.code === currentLang)?.native}
+                  {languages.find(lang => lang.code === currentLanguage)?.native}
                 </span>
               </motion.button>
               
@@ -134,11 +130,11 @@ export function Navigation() {
                     <button
                       key={lang.code}
                       onClick={() => {
-                        setCurrentLang(lang.code);
+                        setLanguage(lang.code);
                         setShowLangDropdown(false);
                       }}
                       className={`w-full px-4 py-3 text-left hover:bg-nature-forest/10 transition-colors ${
-                        currentLang === lang.code ? 'bg-nature-forest/20 text-nature-forest font-semibold' : 'text-gray-700'
+                        currentLanguage === lang.code ? 'bg-nature-forest/20 text-nature-forest font-semibold' : 'text-gray-700'
                       }`}
                     >
                       <div className="font-medium">{lang.native}</div>
